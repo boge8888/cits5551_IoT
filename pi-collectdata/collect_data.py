@@ -4,19 +4,6 @@ import pymysql
 import time
 import datetime
 
-# con = pymysql.connect(
-#     host='120.78.146.114',
-#     port=3306,
-#     user='sensors',
-#     password='raspberryproject',
-#     db='sensors',
-#     charset='utf8'
-# )
-# cur = con.cursor()
-# cur.execute("select * from data")
-# data = cur.fetchall()
-# print(data)
-
 
 
 sense = SenseHat()
@@ -56,11 +43,11 @@ while True:
     # sense.show_message("temp=%0.2fC" % temp, scroll_speed=0.05,
     #                    text_colour=color_text, back_colour=color_back)
     db = pymysql.connect(
-        host='120.78.146.114',
+        host='localhost',
         port=3306,
-        user='sensors',
-        password='raspberryproject',
-        db='sensors',
+        user='111111',
+        password='1111111',
+        db='111111',
         charset='utf8'
     )
     cursor = db.cursor()
