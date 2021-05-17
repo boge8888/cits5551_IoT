@@ -1,9 +1,0 @@
-#端口号配置
-server:
-  port: 8080
-spring:
-  datasource:
-    url: jdbc:mysql://120.78.146.114:3306/sensors?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT
-    username: sensors
-    password: raspberryproject
-    driver-class-name: com.mysql.jdbc.Driver
