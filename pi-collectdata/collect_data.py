@@ -39,7 +39,8 @@ while True:
     # 终端打印出温度值，保存小数点后两位; The terminal prints out the temperature value, saving two decimal places
     # print("Temperature: %0.2f C" % temp)
 
-    # 参数scroll_speed修改的是滚动速度,默认0.1，text_colour是显示的字体颜色，back_colour是背景颜色; The parameter scroll_speed modifies the scrolling speed, default 0.1, text_colour is the displayed font color, back_colour is the background color
+    # 参数scroll_speed修改的是滚动速度,默认0.1，text_colour是显示的字体颜色，back_colour是背景颜色; 
+    # The parameter scroll_speed modifies the scrolling speed, default 0.1, text_colour is the displayed font color, back_colour is the background color
     # sense.show_message("temp=%0.2fC" % temp, scroll_speed=0.05,
     #                    text_colour=color_text, back_colour=color_back)
     db = pymysql.connect(
