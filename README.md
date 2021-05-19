@@ -30,9 +30,9 @@ java -jar idea-sharing-0.0.1-SNAPSHOT.jar
 The server can respond to request from the frontend web page on port 8080. We provide a [swagger ui](http://120.78.146.114:8080/swagger-ui.html#) to briefly present the server APIs.
 
 ## HBM Frontend
-This consists of a Vue front end project prototype, which includes a login page and a main page,some css format and javascript code. This demo shows the baisc functionas of our system. It provides basic page preview, Api accesing functions and data updating. It will get improved or even rebuild in the future. For now, it is just a prototye for presentation.
-To run the code, you need to download "VScode" and install "Live server". Then edit the settings.json file for live sever to establish a proxy. Otherwise we are not able to access our backend API. This inconvenience will be fixed in the future.
-What you need to include in settings.json:
+This consists of a Vue front end project prototype, which includes a login page and a main page,some css format and javascript code. This demo shows the baisc functionas of our system. It provides basic page preview, Api accesing functions and data updating. It will be improved or even rebuilt in the future. For now, it is just a prototye for presentation.
+To run the code, you need to download "VScode" and install "Live server" extension. Then edit the settings.json file of live sever to establish a proxy. Otherwise accessment to our backend API will be treated as cross domain access. This inconvenience will be fixed in the future.
+What you need to include in settings.json is:
 
 ```
 "liveServer.settings.proxy": {  
