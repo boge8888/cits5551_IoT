@@ -46,7 +46,7 @@ What you need to include in settings.json is:
 }
 ```
 ## Frontend Framework Comparison and Decision
-This section analyse feasibility of popular front-end development frameworks (such as Bootstrap, Angular, React, and Vue). The following lists provide summaries for the features, advantages, and applicable scenarios of each framework.
+This section first analyse feasibility of popular front-end development frameworks (such as Bootstrap, Angular, React, and Vue). And then we explain why we utilise Vue to build our website. The following lists provide summaries for the features, advantages, and applicable scenarios of each framework.
 
 ### The Vue Framework
 i.   The lightweight implementation makes applications easy for installation and deployment.  
