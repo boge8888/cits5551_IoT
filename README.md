@@ -45,3 +45,4 @@ What you need to include in settings.json is:
 
 }```
 
+## Frontend Framework Comparison and decision
