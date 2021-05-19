@@ -1,4 +1,4 @@
-### IoT based Bridge Health Monitoring (BHM)
+# IoT based Bridge Health Monitoring (BHM)
 
 This is a prototype for IoT based Bridge Health Monitoring (BHM)
 
