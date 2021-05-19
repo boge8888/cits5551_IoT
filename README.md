@@ -56,21 +56,21 @@ iv.  Require less optimisation.
 v.   Code libraries change less frequently.  
 
 ### The Bootstrap Framework
-i.   Support multi-device platforms.
-ii.  Responsive layout
-iii. Modularised CSS files.
-iv.  Provide built-in JavaScript plugins and abundant components.
+i.   Support multi-device platforms.  
+ii.  Responsive layout.  
+iii. Modularised CSS files.  
+iv.  Provide built-in JavaScript plugins and abundant components.  
 
 ### The Angular Framework
-i.   Smooth bidirectional data binding.
-ii.  Provides an efficient components set, thus simplifying the process of writing, changing and using.
-iii. The precompiler feature helps applications loading faster.
-iv.  MVC model allows view separation.
+i.   Smooth bidirectional data binding.  
+ii.  Provides an efficient components set, thus simplifying the process of writing, changing and using.  
+iii. The precompiler feature helps applications loading faster.  
+iv.  MVC model allows view separation.  
 
 ### The React Framework
-i.   Modularised structure enables flexible code format.
-ii.  Helpful for high-performance implementation of complex applications.
-iii. Using React front-end development can be easier to maintain codes.
-iv.  Support native mobile applications for Android and iOS platforms.
+i.   Modularised structure enables flexible code format.  
+ii.  Helpful for high-performance implementation of complex applications.  
+iii. Using React front-end development can be easier to maintain codes.  
+iv.  Support native mobile applications for Android and iOS platforms.  
 
 All frameworks have outstanding advantages and irreplaceable features for different applications. Considering the learning cost, Vue is the cheapest framework. It only requires basic JavaScript knowledge to participate in building the project. In addition, Vue provides abundant interfaces, plugins and code libraries, which are helpful to facilitate the prototyping of the system. Moreover, the lightweight implementation makes it easy to deploy Vue-based applications. Finally, our project life cycle will last the whole year, modules of Vue are rarely updated, which could be helpful to avoid unnecessary trouble. In summary, we decided to utilise the Vue framework to build our website.
