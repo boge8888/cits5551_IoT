@@ -27,7 +27,7 @@ To test the code, first generate table structure using the .sql file. Then run t
 # Run HBMbackend on Linux/macOS
 java -jar idea-sharing-0.0.1-SNAPSHOT.jar
 ```
-The server can respond to request from the frontend web page on port 8080. We provide a [swagger ui](http://120.78.146.114:8080/swagger-ui.html#) to briefly present the server APIs.
+The server can respond to request from the frontend web page on port 8080. We provide a [swagger ui](http://120.78.146.114:8080/swagger-ui.html#) to briefly present the server APIs. Note that some of configuration files are not uploaded out of the safety consideration. If you need those files, please send me a email.
 
 ## BHM Frontend
 This consists of a Vue front end project prototype, which includes a login page and a main page,some css format and javascript code. This demo shows the baisc functionas of our system. It provides basic page preview, Api accesing functions and data updating. It will be improved or even rebuilt in the future. For now, it is just a prototye for presentation.
