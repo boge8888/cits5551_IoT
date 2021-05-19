@@ -7,7 +7,7 @@ Project codes for cits5551_IoT 2021
 ## BHM Data collecting
 This work is based on the raspberry pi 4b. The software of the subsystem consists of sensor data collection and data uploading.
 
-To run the program navigate to the pi-collectdata folder, run the collect_data.py, assuming that all dependencies have been installed. The commands to install necessary libraries is as follow:
+To run the program navigate to the pi-collectdata folder, run the collect_data.py, assuming that all dependencies have been installed. The commands to install necessary libraries are as follow:
 
 ```bash
 sudo apt-get install sense_hat
