@@ -21,9 +21,10 @@ python3 collect_data.py
 The program will constantly collect data from sensors and upload them to the online mysql.
 
 ## HBM Backend
-This consists of a Java webserver using the Springboot  framework. This is the webserver used by the project, as well as the server handling a basic API. In the project, we deployed the application on AliCloud web server.
+This consists of a Java webserver using the Springboot  framework. This is the webserver used by the project, as well as the server handling a basic API. In the project, we deployed the application on AliCloud Elastic Compute Service (ECS).
+To test the code, first generate table structure using the .sql file. Then run the following command:
 ```bash
 # Run HBMbackend on Linux/macOS
 java -jar idea-sharing-0.0.1-SNAPSHOT.jar
 ```
-The frontend web page can request data to the webserver.
+The server can respond to request from the frontend web page on port 8080.
