@@ -34,7 +34,8 @@ This consists of a Vue front end project prototype, which includes a login page 
 To run the code, you need to download "VScode" and install "Live server". Then edit the settings.json file for live sever to establish a proxy. Otherwise we are not able to access our backend API. This inconvenience will be fixed in the future.
 What you need to include in settings.json:
 
-```"liveServer.settings.proxy": {  
+```
+"liveServer.settings.proxy": {  
         //Proxy setting
         "enable": true, //Open proxy
 
