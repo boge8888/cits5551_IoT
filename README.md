@@ -1,6 +1,6 @@
 # IoT based Bridge Health Monitoring (BHM)
 
-High quality presentation video of running these codes are available in link:https://drive.google.com/file/d/1nX9erjBW92TAlV_K7drAqIowTriYzTQV/view?usp=sharing.
+High quality presentation video of running this prototype is available in link:https://drive.google.com/file/d/1nX9erjBW92TAlV_K7drAqIowTriYzTQV/view?usp=sharing.
 
 This is a prototype for IoT based Bridge Health Monitoring (BHM)
 
