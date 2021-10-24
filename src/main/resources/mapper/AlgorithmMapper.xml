@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.boge.pibackend.dao.AlgorithmMapper">
+  <resultMap id="BaseResultMap" type="com.boge.pibackend.entity.Algorithm">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="date" jdbcType="DATE" property="date" />
+    <result column="degree" jdbcType="INTEGER" property="degree" />
+    <result column="device_id" jdbcType="BIGINT" property="device_id" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from algorithm
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.boge.pibackend.entity.Algorithm">
+    insert into algorithm (id, `name`, `date`, `degree`, 
+      device_id, `status`)
+    values (#{id,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{date,jdbcType=DATE}, #{degree,jdbcType=INTEGER}, 
+      #{device_id,jdbcType=BIGINT}, #{status,jdbcType=INTEGER})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.boge.pibackend.entity.Algorithm">
+    update algorithm
+    set `name` = #{name,jdbcType=VARCHAR},
+      `date` = #{date,jdbcType=DATE},
+      `degree` = #{degree,jdbcType=INTEGER},
+      device_id = #{device_id,jdbcType=BIGINT},
+      `status` = #{status,jdbcType=INTEGER}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select id, `name`, `date`, `degree`, device_id, `status`
+    from algorithm
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, `name`, `date`, `degree`, device_id, `status`
+    from algorithm
+  </select>
+</mapper>

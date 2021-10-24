@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>BHM notification</title>
+    <style>
+        body {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #main {
+            text-align: center;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<div id="main">
+    <h3>Welcome <span th:text="${project}"></span> -By <span th:text=" ${author}"></span></h3>
+<!--    Your Verification Code is-->
+    Warning:
+    <h2><span th:text="${code}"></span></h2>
+</div>
+</body>
+</html>

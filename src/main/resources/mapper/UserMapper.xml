@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.boge.pibackend.dao.UserMapper">
+  <resultMap id="BaseResultMap" type="com.boge.pibackend.entity.User">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="organization" jdbcType="VARCHAR" property="organization" />
+    <result column="role" jdbcType="VARCHAR" property="role" />
+    <result column="avatar" jdbcType="VARCHAR" property="avatar" />
+    <result column="email1" jdbcType="VARCHAR" property="email1" />
+    <result column="email2" jdbcType="VARCHAR" property="email2" />
+    <result column="date" jdbcType="DATE" property="date" />
+    <result column="gender" jdbcType="VARCHAR" property="gender" />
+    <result column="token" jdbcType="VARCHAR" property="token" />
+    <result column="reserved" jdbcType="VARCHAR" property="reserved" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from user
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.boge.pibackend.entity.User">
+    insert into user (id, `name`, `password`, 
+      phone, address, organization, 
+      `role`, avatar, email1, 
+      email2, `date`, gender, 
+      token, reserved)
+    values (#{id,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
+      #{phone,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, #{organization,jdbcType=VARCHAR}, 
+      #{role,jdbcType=VARCHAR}, #{avatar,jdbcType=VARCHAR}, #{email1,jdbcType=VARCHAR}, 
+      #{email2,jdbcType=VARCHAR}, #{date,jdbcType=DATE}, #{gender,jdbcType=VARCHAR}, 
+      #{token,jdbcType=VARCHAR}, #{reserved,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.boge.pibackend.entity.User">
+    update user
+    <trim prefix="set" suffixOverrides=",">
+      <if test="name!=null">`name` = #{name,jdbcType=VARCHAR},</if>
+      <if test="password!=null">`password` = #{password,jdbcType=VARCHAR},</if>
+      <if test="phone!=null">phone = #{phone,jdbcType=VARCHAR},</if>
+      <if test="address!=null">address = #{address,jdbcType=VARCHAR},</if>
+      <if test="organization!=null">organization = #{organization,jdbcType=VARCHAR},</if>
+      <if test="role!=null">`role` = #{role,jdbcType=VARCHAR},</if>
+      <if test="avatar!=null">avatar = #{avatar,jdbcType=VARCHAR},</if>
+      <if test="email1!=null">email1 = #{email1,jdbcType=VARCHAR},</if>
+      <if test="email2!=null">email2 = #{email2,jdbcType=VARCHAR},</if>
+      <if test="date!=null">`date` = #{date,jdbcType=DATE},</if>
+      <if test="gender!=null">gender = #{gender,jdbcType=VARCHAR},</if>
+      <if test="token!=null">token = #{token,jdbcType=VARCHAR},</if>
+      <if test="reserved!=null">reserved = #{reserved,jdbcType=VARCHAR},</if>
+    </trim>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select id, `name`, `password`, phone, address, organization, `role`, avatar, email1, 
+    email2, `date`, gender, token, reserved
+    from user
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, `name`, `password`, phone, address, organization, `role`, avatar, email1, 
+    email2, `date`, gender, token, reserved
+    from user
+  </select>
+  <select id="selectByUserName" parameterType="java.lang.String" resultType="com.boge.pibackend.entity.User">
+    select *
+    from user
+    where `name` = #{name};
+  </select>
+</mapper>
