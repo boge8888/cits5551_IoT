@@ -1,9 +1,0 @@
-#端口号配置
-server:
-  port: 8520
-spring:
-  datasource:
-    url: jdbc:mysql://localhost:3306/idea_share?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT
-    username: root
-    password: hhhh
-    driver-class-name: com.mysql.jdbc.Driver
