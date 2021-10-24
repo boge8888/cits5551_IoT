@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.boge.pibackend.dao.LogMapper">
+  <resultMap id="BaseResultMap" type="com.boge.pibackend.entity.Log">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="bridge_id" jdbcType="BIGINT" property="bridge_id" />
+    <result column="device_id" jdbcType="BIGINT" property="device_id" />
+    <result column="degree" jdbcType="INTEGER" property="degree" />
+    <result column="parameter" jdbcType="INTEGER" property="parameter" />
+    <result column="date" jdbcType="DATE" property="date" />
+    <result column="timestamp" jdbcType="VARCHAR" property="timestamp" />
+    <result column="reserved" jdbcType="VARCHAR" property="reserved" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from log
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.boge.pibackend.entity.Log">
+    insert into log (id, bridge_id, device_id, 
+      `degree`, `parameter`, `date`, 
+      `timestamp`, reserved)
+    values (#{id,jdbcType=BIGINT}, #{bridge_id,jdbcType=BIGINT}, #{device_id,jdbcType=BIGINT}, 
+      #{degree,jdbcType=INTEGER}, #{parameter,jdbcType=INTEGER}, #{date,jdbcType=DATE}, 
+      #{timestamp,jdbcType=VARCHAR}, #{reserved,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.boge.pibackend.entity.Log">
+    update log
+    set bridge_id = #{bridge_id,jdbcType=BIGINT},
+      device_id = #{device_id,jdbcType=BIGINT},
+      `degree` = #{degree,jdbcType=INTEGER},
+      `parameter` = #{parameter,jdbcType=INTEGER},
+      `date` = #{date,jdbcType=DATE},
+      `timestamp` = #{timestamp,jdbcType=VARCHAR},
+      reserved = #{reserved,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select id, bridge_id, device_id, `degree`, `parameter`, `date`, `timestamp`, reserved
+    from log
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, bridge_id, device_id, `degree`, `parameter`, `date`, `timestamp`, reserved
+    from log
+  </select>
+</mapper>
